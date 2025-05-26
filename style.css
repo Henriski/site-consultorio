@@ -651,11 +651,12 @@ a {
 }
 
 .tratamentos-section {
-  padding: 60px 20px;
+  padding: 60px 0;
   background: linear-gradient(135deg, #21376f, #3d86ab);
   text-align: center;
   color: #fff;
-  width: 100%;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .tratamentos-section h1 {
@@ -676,18 +677,19 @@ a {
 
 .tratamentos-container-wrapper {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .tratamentos-container {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;
-  padding: 10px;
+  gap: 10px;
+  padding: 10px 0;
   scroll-snap-type: x mandatory;
   cursor: grab;
-  width: 100%;
+  width: 100vw;
 }
 
 .tratamento-item {
@@ -710,6 +712,7 @@ a {
   object-fit: cover;
   border-radius: 8px;
   flex: 0 0 auto;
+  aspect-ratio: 4/3;
 }
 
 .tratamento-info {
@@ -753,7 +756,7 @@ a {
   overflow-x: scroll;
   scrollbar-width: none;
   scroll-behavior: smooth;
-  width: 100%;
+  width: 100vw;
 }
 
 #tratamentos-scroll::-webkit-scrollbar {
@@ -783,33 +786,52 @@ a {
 }
 
 .scroll-btn.left {
-  left: -10px;
+  left: 5px;
 }
 
 .scroll-btn.right {
-  right: -10px;
+  right: 5px;
 }
 
 @media (max-width: 768px) {
+  .tratamentos-section {
+    padding: 60px 0;
+  }
+
   .tratamentos-container {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 20px;
-    padding: 10px;
-    touch-action: none;
+    gap: 10px;
+    padding: 10px 0;
+    touch-action: pan-x;
     -webkit-user-drag: none;
     user-select: none;
+    width: 100vw;
   }
 
   .tratamento-item {
-    width: 350px;
+    width: calc(100vw - 20px);
+    max-width: 400px;
     flex: 0 0 auto;
     scroll-snap-align: center;
+    margin: 0 10px;
   }
 
-  .scroll-btn {
-    display: block;
+  .tratamento-item img {
+    width: calc(45vw - 10px);
+    max-width: 180px;
+    height: auto;
+    aspect-ratio: 4/3;
+  }
+
+  .tratamento-info h3 {
+    font-size: 12px;
+  }
+
+  .saiba-mais-btn {
+    font-size: 10px;
+    padding: 5px 10px;
   }
 
   .tratamentos-section p {
