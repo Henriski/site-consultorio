@@ -68,7 +68,7 @@ a {
   display: block;
   width: 160px;
   height: 80px;
-  background: url("img/bg.png") center / contain no-repeat;
+  background: url("bg.png") center / contain no-repeat;
   overflow: hidden;
   white-space: nowrap;
   text-indent: -9999px;
