@@ -117,29 +117,42 @@ scrollContainer.addEventListener("touchmove", (e) => {
   scrollContainer.scrollLeft = scrollLeft - walk;
 });
 
-btnLeft.addEventListener("click", () => {
-  scrollContainer.scrollBy({ left: -300, behavior: 'smooth' });
-});
-
-btnRight.addEventListener("click", () => {
-  scrollContainer.scrollBy({ left: 300, behavior: 'smooth' });
-});
-
 document.addEventListener('DOMContentLoaded', () => {
-  const navLinks = document.querySelectorAll('.nav-list a');
-  const navbar = document.querySelector('.nav');
-  const navbarHeight = navbar.offsetHeight;
+  const scrollContainer = document.getElementById('tratamentos-scroll');
+  const leftBtn = document.querySelector('.scroll-btn.left');
+  const rightBtn = document.querySelector('.scroll-btn.right');
 
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
+  function getScrollAmount() {
+    const item = scrollContainer.querySelector('.tratamento-item');
+    if (item) {
+      return item.getBoundingClientRect().width + 10;
+    }
+    return 350 + 10;
+  }
 
-      window.scrollTo({
-        top: targetElement.offsetTop - navbarHeight,
-        behavior: 'smooth'
-      });
+  scrollContainer.scrollTo({
+    left: 0,
+    behavior: 'smooth'
+  });
+
+  leftBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: -getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: getScrollAmount(),
+      behavior: 'smooth'
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    scrollContainer.scrollTo({
+      left: 0,
+      behavior: 'smooth'
     });
   });
 });
@@ -212,27 +225,6 @@ document.addEventListener("keydown", (e) => {
     popup.classList.remove("active");
     unlockScroll();
   }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  const scrollContainer = document.getElementById('tratamentos-scroll');
-  const leftBtn = document.querySelector('.scroll-btn.left');
-  const rightBtn = document.querySelector('.scroll-btn.right');
-  const scrollAmount = 350 + 20;
-
-  leftBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({
-      left: -scrollAmount,
-      behavior: 'smooth'
-    });
-  });
-
-  rightBtn.addEventListener('click', () => {
-    scrollContainer.scrollBy({
-      left: scrollAmount,
-      behavior: 'smooth'
-    });
-  });
 });
 
 document.querySelectorAll('.footer-col.institucional-links a').forEach(link => {
