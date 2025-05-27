@@ -295,11 +295,15 @@ a {
 
   .footer-col.institucional-links a:active,
   .footer-col.institucional-links a:focus,
-  .footer-col.institucional-links a:visited {
+  .footer-col.institucional-links a:visited,
+  .footer-col.local-links a:active,
+  .footer-col.local-links a:focus,
+  .footer-col.local-links a:visited {
     color: inherit !important;
   }
 
-  .footer-col.institucional-links a {
+  .footer-col.institucional-links a,
+  .footer-col.local-links a {
     transition: none !important;
   }
 }
