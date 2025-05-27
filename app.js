@@ -15,7 +15,23 @@ hamburger.addEventListener("click", () => {
 });
 
 navLinks.forEach(link => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // Impede o comportamento padrão do link
+    const targetId = link.getAttribute('href').substring(1); // Obtém o ID do destino
+    const targetElement = document.getElementById(targetId);
+    
+    if (targetElement) {
+      const navbarHeight = 70; // Altura da navbar fixa (definida no CSS)
+      const offset = 30; // Espaço extra para melhor visualização
+      const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - offset;
+      
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Fecha o menu hamburger em dispositivos móveis
     nav.classList.remove("active");
     hamburger.setAttribute("aria-expanded", false);
   });
