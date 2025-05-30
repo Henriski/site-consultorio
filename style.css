@@ -688,15 +688,22 @@ a {
 .tratamentos-container {
   display: flex;
   overflow-x: auto;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Mantém o movimento suave durante o arrastar */
   gap: 8px;
-  padding: 10px 10px;
+  padding: 10px 10px 10px 10px;
+  padding-right: 30px; /* Espaço extra para o último slide */
   scroll-snap-type: x mandatory;
-  cursor: grab;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
+  touch-action: pan-x; /* Permite arrastar por toque no mobile */
   will-change: scroll-position;
+  overscroll-behavior-x: contain;
+  cursor: grab; /* Cursor de arrastar */
+  transition: cursor 0.2s ease; /* Transição suave para o cursor */
+}
+
+.tratamentos-container.grabbing {
+  cursor: grabbing; /* Cursor durante o arrastar */
 }
 
 .tratamento-item {
@@ -801,15 +808,19 @@ a {
 }
 
 .scroll-btn.right {
-  right: 5px;
+  right: 20px;
 }
 
 @media (max-width: 768px) {
+  .scroll-btn.right {
+    right: 5px;
+  }
   .tratamentos-section {
     padding: 60px 0;
   }
 
   .tratamentos-container {
+    cursor: grab;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
