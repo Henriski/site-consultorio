@@ -16,13 +16,13 @@ hamburger.addEventListener("click", () => {
 
 navLinks.forEach(link => {
   link.addEventListener("click", (e) => {
-    e.preventDefault(); // Impede o comportamento padrão do link
-    const targetId = link.getAttribute('href').substring(1); // Obtém o ID do destino
+    e.preventDefault();
+    const targetId = link.getAttribute('href').substring(1);
     const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
-      const navbarHeight = 70; // Altura da navbar fixa (definida no CSS)
-      const offset = 30; // Espaço extra para melhor visualização
+      const navbarHeight = 70;
+      const offset = 30;
       const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight - offset;
       
       window.scrollTo({
@@ -31,7 +31,6 @@ navLinks.forEach(link => {
       });
     }
     
-    // Fecha o menu hamburger em dispositivos móveis
     nav.classList.remove("active");
     hamburger.setAttribute("aria-expanded", false);
   });
@@ -133,6 +132,43 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: 'smooth'
     });
   });
+
+  const isTouchDevice = () => 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  if (!isTouchDevice()) {
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    scrollContainer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      scrollContainer.classList.add('grabbing');
+      startX = e.pageX - scrollContainer.offsetLeft;
+      scrollLeft = scrollContainer.scrollLeft;
+    });
+
+    scrollContainer.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - scrollContainer.offsetLeft;
+      const walk = (x - startX);
+      scrollContainer.scrollLeft = scrollLeft - walk;
+    });
+
+    scrollContainer.addEventListener('mouseup', () => {
+      isDragging = false;
+      scrollContainer.classList.remove('grabbing');
+      snapToNearestItem();
+    });
+
+    scrollContainer.addEventListener('mouseleave', () => {
+      if (isDragging) {
+        isDragging = false;
+        scrollContainer.classList.remove('grabbing');
+        snapToNearestItem();
+      }
+    });
+  }
 
   scrollContainer.addEventListener('scroll', () => {
     clearTimeout(scrollContainer.scrollTimeout);
