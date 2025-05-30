@@ -688,22 +688,22 @@ a {
 .tratamentos-container {
   display: flex;
   overflow-x: auto;
-  scroll-behavior: smooth; /* Mantém o movimento suave durante o arrastar */
+  scroll-behavior: smooth;
   gap: 8px;
   padding: 10px 10px 10px 10px;
-  padding-right: 30px; /* Espaço extra para o último slide */
+  padding-right: 30px;
   scroll-snap-type: x mandatory;
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x; /* Permite arrastar por toque no mobile */
+  touch-action: pan-x;
   will-change: scroll-position;
   overscroll-behavior-x: contain;
-  cursor: grab; /* Cursor de arrastar */
-  transition: cursor 0.2s ease; /* Transição suave para o cursor */
+  cursor: grab;
+  transition: cursor 0.2s ease;
 }
 
 .tratamentos-container.grabbing {
-  cursor: grabbing; /* Cursor durante o arrastar */
+  cursor: grabbing;
 }
 
 .tratamento-item {
