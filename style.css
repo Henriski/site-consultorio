@@ -143,8 +143,8 @@ a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(45deg, #21376f, #3d86ab);
-  color: #fff;
+  background-color: #fff;
+  color: #21376f;
   border: none;
   width: 42px;
   height: 42px;
@@ -210,17 +210,10 @@ a {
 }
 
 .footer-bottom {
-  text-align: center;
-  font-size: 13px;
   color: #555;
   border-top: 1px solid #ccc;
   margin-top: 30px;
   padding-top: 20px;
-}
-
-.footer-bottom a {
-  color: #333;
-  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
