@@ -68,7 +68,7 @@ if (!window.carouselInterval) {
   window.carouselInterval = setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
-  }, 5000);
+  }, 3000);
 }
 
 const faders = document.querySelectorAll(".fade-in");
