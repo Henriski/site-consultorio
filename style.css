@@ -942,7 +942,7 @@ a {
   flex: 1;
   width: 100%;
   max-width: none;
-  padding-right: 30px;
+  padding-right: 5px;
   max-height: 400px;
   overflow-y: auto;
   min-width: 300px;
