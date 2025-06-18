@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href="icone.png" type="image/x-icon"/>
+  <title>Odontologia Reishtatter</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">Odontologia Reishtatter</a>
+      <button class="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false"></button>
+      <ul class="nav-list">
+        <li><a href="#sobre-consultorio">Quem Somos</a></li>
+        <li><a href="#tratamentos">Tratamentos</a></li>
+        <li><a href="#endereco">Endereço</a></li>
+        <li><a href="#equipe">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro-section fade-in">
+      <div class="intro-container">
+        <div class="intro-text">
+          <h1>Odontologia Reishtatter: Consultório Odontoclínica</h1>
+          <p>Somos um consultório comprometido em transformar seu belo sorriso. Atuamos com excelência, cuidado e os melhores profissionais.</p>
+          <a href="https://wa.link/8b4pun" class="btn-contato" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            Fale Conosco
+          </a>
+          <a href="https://www.instagram.com/reishtatter.odontologia" class="btn-instagram" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            Nosso Instagram
+          </a>
+        </div>
+        <div class="hero">
+          <div class="carousel" aria-live="polite">
+            <img src="fachada.jpg" class="carousel-img active" alt="Fachada do consultório"/>
+            <img src="lateral.jpg" class="carousel-img" alt="Vista lateral do consultório"/>
+            <img src="recepcao.jpg" class="carousel-img" alt="Recepção do consultório"/>
+            <img src="sala1.jpg" class="carousel-img" alt="Sala de atendimento 1 do consultório"/>
+            <img src="sala2.jpg" class="carousel-img" alt="Sala de atendimento 2 do consultório"/>
+            <button class="carousel-btn prev" aria-label="Esquerda">❮</button>
+            <button class="carousel-btn next" aria-label="Direita">❯</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="info-container fade-in">
+      <div id="sobre-consultorio" class="quemsomos info-box">
+        <div class="quemsomos-content">
+          <div class="quemsomos-image">
+            <img src="odonto.jpg" alt="Imagem do consultório" />
+          </div>
+          <div class="quemsomos-text">
+            <h2>Sobre nós:</h2>
+            <p>O consultório segue as normas do CFO e CRO, em coesão com a vigilância sanitária, com gerenciamento adequado de resíduos odontológicos e esterilização rigorosa de instrumentos. O atendimento é personalizado, com foco na satisfação do paciente desde o agendamento até o pós-consulta.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tratamentos" class="tratamentos-section">
+      <h1>Tratamentos:</h1>
+      <p>Conheça nossos tratamentos para seu novo sorriso.</p>
+      <div class="tratamentos-container-wrapper">
+        <div class="tratamentos-container" id="tratamentos-scroll">
+          <div class="tratamento-item">
+            <img src="limpeza.png" alt="Limpeza"/>
+            <div class="tratamento-info">
+              <h3>Limpeza</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Limpeza" 
+                      data-description="Procedimento para remover placa e tártaro dos dentes, promovendo saúde bucal. Realizado por dentista com instrumentos específicos." 
+                      data-img="limpeza.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="implante.png" alt="Implante"/>
+            <div class="tratamento-info">
+              <h3>Implante</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Implante" 
+                      data-description="Substituição de dente perdido por um pino de titânio fixado no osso, com coroa artificial. Restaura função e estética." 
+                      data-img="implante.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="caries.png" alt="Remoção de Cáries"/>
+            <div class="tratamento-info">
+              <h3>Remoção de Cáries</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Remoção de Cáries" 
+                      data-description="Tratamento para eliminar tecido dentário cariado, seguido de restauração. Previne a progressão da cárie." 
+                      data-img="caries.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="extracao.png" alt="Extração"/>
+            <div class="tratamento-info">
+              <h3>Extração</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Extração" 
+                      data-description="Remoção de um dente danificado ou comprometido, realizada sob anestesia. Indicada quando não há possibilidade de reparo." 
+                      data-img="extracao.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="preenchimento.png" alt="Preenchimento Labial"/>
+            <div class="tratamento-info">
+              <h3>Preenchimento Labial</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Preenchimento Labial" 
+                      data-description="Aplicação de ácido hialurônico para aumentar volume e melhorar contorno dos lábios. Procedimento estético minimamente invasivo." 
+                      data-img="preenchimento.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="botox.png" alt="Botox"/>
+            <div class="tratamento-info">
+              <h3>Botox</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Botox" 
+                      data-description="Injeção de toxina botulínica para relaxar músculos faciais, reduzindo rugas. Usado em odontologia para fins estéticos e funcionais." 
+                      data-img="botox.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="odontopediatria.png" alt="Odontopediatria"/>
+            <div class="tratamento-info">
+              <h3>Odontopediatria</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Odontopediatria" 
+                      data-description="Atendimento odontológico especializado para crianças, focado em prevenção e tratamento. Promove saúde bucal desde cedo." 
+                      data-img="odontopediatria.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="radiografia.png" alt="Radiografia"/>
+            <div class="tratamento-info">
+              <h3>Radiografia</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Radiografia" 
+                      data-description="Exame de imagem para diagnosticar problemas dentários e ósseos. Essencial para planejamento de tratamentos." 
+                      data-img="radiografia.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="reconstrucao.png" alt="Reconstrução"/>
+            <div class="tratamento-info">
+              <h3>Reconstrução</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Reconstrução" 
+                      data-description="Restauração de dentes danificados com materiais como resina ou cerâmica. Recupera forma, função e estética." 
+                      data-img="reconstrucao.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="periodontia.png" alt="Periodontia"/>
+            <div class="tratamento-info">
+              <h3>Periodontia</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Periodontia" 
+                      data-description="Tratamento de doenças gengivais, como gengivite e periodontite, com limpeza profunda. Preserva a saúde dos tecidos de suporte." 
+                      data-img="periodontia.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="faceta.png" alt="Faceta"/>
+            <div class="tratamento-info">
+              <h3>Faceta</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Faceta" 
+                      data-description="Lâmina de porcelana ou resina colada ao dente para corrigir estética. Melhora cor, forma e alinhamento." 
+                      data-img="Faceta.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="protocolo.png" alt="Protocolo"/>
+            <div class="tratamento-info">
+              <h3>Protocolo</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Protocolo" 
+                      data-description="Prótese fixa total sobre implantes para substituir todos os dentes de uma arcada. Oferece estabilidade e estética." 
+                      data-img="protocolo.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="canal.png" alt="Canal"/>
+            <div class="tratamento-info">
+              <h3>Canal</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Canal" 
+                      data-description="Tratamento para remover polpa dentária infectada, desinfetar e selar o canal. Salva dentes com infecção ou danos graves." 
+                      data-img="canal.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="aparelho.png" alt="Aparelho"/>
+            <div class="tratamento-info">
+              <h3>Aparelho</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Aparelho" 
+                      data-description="Dispositivo ortodôntico para corrigir alinhamento e mordida dos dentes. Pode ser fixo ou removível." 
+                      data-img="aparelho.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="lentes.png" alt="Lentes"/>
+            <div class="tratamento-info">
+              <h3>Lentes</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Lentes" 
+                      data-description="Finas lâminas de porcelana aplicadas aos dentes para estética perfeita. Ideais para corrigir imperfeições e manchas." 
+                      data-img="lentes.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="siso.png" alt="Extração de Siso"/>
+            <div class="tratamento-info">
+              <h3>Extração de Siso</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Extração de Siso" 
+                      data-description="Remoção dos terceiros molares, muitas vezes inclusos ou mal posicionados. Feita sob anestesia para evitar complicações." 
+                      data-img="siso.png">Saiba Mais</button>
+            </div>
+          </div>
+          <div class="tratamento-item">
+            <img src="protese.png" alt="Prótese Total e Parcial"/>
+            <div class="tratamento-info">
+              <h3>Prótese Total e Parcial</h3>
+              <button class="saiba-mais-btn" 
+                      data-title="Prótese Total e Parcial" 
+                      data-description="Próteses totais, removíveis, substituem todos os dentes de uma arcada; parciais, fixas ou removíveis, repõem alguns dentes, ambas melhorando mastigação, fala e estética." 
+                      data-img="protese.png">Saiba Mais</button>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-btn-container">
+          <button class="scroll-btn left" aria-label="Esquerda">❮</button>
+          <button class="scroll-btn right" aria-label="Direita">❯</button>
+      </div>
+    </section>
+
+    <section class="info-container fade-in">
+      <div id="endereco" class="endereco info-box">
+        <div class="endereco-content">
+          <div class="endereco-text">
+            <h2>Localização:</h2>
+            <p>O consultório fica localizado numa via de fácil acesso, na avenida principal do bairro São Deocleciano. Venha nos visitar!</p>
+            <a href="https://wa.link/8b4pun" class="btn-contato" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-whatsapp"></i>
+              Entre em contato
+            </a>
+          </div>
+          <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d719.4477992111379!2d-49.34438797639166!3d-20.792334637274912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bc529594c59c55%3A0x68d8e3840233efc4!2sCl%C3%ADnica%20Odontol%C3%B3gica%20Reishtatter!5e1!3m2!1spt-BR!2sbr!4v1744600654140!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="equipe-section" id="equipe">
+      <div class="info-container">
+        <div class="info-box">
+          <h2>Nossos Profissionais:</h2>
+          <div class="equipe-members">
+            <div class="equipe-member">
+              <img src="odonto.jpg" alt="Profissional 1" class="equipe-img">
+              <h3>Nome do Profissional</h3>
+              <p>Descrição do profissional.</p>
+            </div>
+            <div class="equipe-member">
+              <img src="odonto.jpg" alt="Profissional 1" class="equipe-img">
+              <h3>Nome do Profissional</h3>
+              <p>Descrição do profissional.</p>
+            </div>
+          </div>
+          <div class="equipe-contato">
+            <a href="https://wa.link/8b4pun" class="btn-contato" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i> Agende um Horário!
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="horario-funcionamento">
+      <i class="fa-regular fa-clock"></i>
+      • Horário de Funcionamento: Segunda a Sexta, das <b>09:30 às 19:00</b> - Sábado, das <b>10:00 às 12:30</b>
+    </div>
+
+    <div class="popup" id="tratamento-popup">
+      <div class="popup-content">
+        <button class="popup-close" aria-label="Fechar popup"></button>
+        <h2 class="popup-title"></h2>
+        <img class="popup-img" src="" alt="Imagem do tratamento"/>
+        <p class="popup-description"></p>
+      </div>
+    </div>
+
+    <footer class="footer-institucional">
+      <div id="sobre" class="footer-container">
+        <div class="footer-col logo-col">
+          <a href="index.html" aria-label="Odontologia Reishtatter">
+            <img src="bg.png" alt="Logo" class="footer-logo" />
+          </a>
+          <p><a href="index.html" aria-label="Odontologia Reishtatter">Odontologia para VOCÊ</a></p>
+        </div>
+        <div class="footer-col contato-info">
+          <h3>Contacte-se Conosco:</h3>
+          <div class="social-icons">
+            <a href="https://wa.link/8b4pun" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/reishtatter.odontologia" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+          <p><i class="fa-solid fa-phone"></i> (17) 99732-8972</p>
+        </div>
+        <div class="footer-col institucional-links">
+          <h3>Links:</h3>
+          <p><a href="#sobre-consultorio">Quem Somos</a></p>
+          <p><a href="#tratamentos">Tratamentos</a></p>
+          <p><a href="#endereco">Endereço</a></p>
+          <p><a href="#equipe">Sobre</a></p>
+        </div>
+        <div class="footer-col local-links">
+          <h3>Local:</h3>
+          <p><i class="fa-solid fa-building"></i><a href="#endereco"> Odontologia Reishtatter: Consultório Odontoclínica</a></p>
+          <p><i class="fa-solid fa-location-dot"></i><a href="https://maps.app.goo.gl/hDgCAGaxB2rLzWqa8" target="_blank" rel="noopener noreferrer"> R. Arlindo Silveira, nº 83 - Conj. Hab. São Deocleciano, São José do Rio Preto - SP, 15057-380</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+      </div>
+      <button id="btn-top" aria-label="Voltar ao topo">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+             viewBox="0 0 24 24">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </footer>
+  </main>
+</body>
+</html>
